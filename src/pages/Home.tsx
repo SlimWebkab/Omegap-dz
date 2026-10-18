@@ -69,8 +69,8 @@ export default function Home() {
             src={IMAGES.hero} 
             onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.hero; }}
             alt="Usine de fabrication de gaines électriques OMEGAP-DZ en Algérie" 
-            width={1600}
-            height={900}
+            width={1100}
+            height={614}
             fetchPriority="high"
             className="w-full h-full object-cover opacity-25 lg:opacity-35 filter brightness-105"
             loading="eager"
