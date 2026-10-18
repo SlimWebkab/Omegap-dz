@@ -92,6 +92,8 @@ export default function Solutions() {
                     src={solution.image} 
                     onError={(e) => { e.currentTarget.src = solution.fallbackImage; }}
                     alt={solution.title} 
+                    width={800}
+                    height={500}
                     className="w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"

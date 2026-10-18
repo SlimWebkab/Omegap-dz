@@ -70,6 +70,8 @@ export default function About() {
                   src={IMAGES.hero} 
                   onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.hero; }}
                   alt="Usine d'extrusion de gaines électriques OMEGAP-DZ à Aït Toudert" 
+                  width={800}
+                  height={520}
                   className="w-full h-[520px] object-cover"
                   loading="lazy"
                   decoding="async"

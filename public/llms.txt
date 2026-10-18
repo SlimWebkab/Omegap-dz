@@ -1,0 +1,50 @@
+# OMEGAP-DZ | Fabricant de Gaines & Conduits Électriques en Algérie
+
+> OMEGAP-DZ est une unité industrielle algérienne spécialisée dans l'extrusion de gaines électriques annelées ICTA 3422, de conduits fendus pour câblage télécom/rénovation, de boîtes d'encastrement et d'emballages plastiques industriels.
+
+## Informations Clés de l'Entreprise
+- **Nom officiel** : SARL OMEGAP DZ (Marque commerciale : OMEGAP-DZ)
+- **Localisation Usine** : Aït Toudert, Daïra de Ouacif, Wilaya de Tizi-Ouzou, Algérie
+- **Site web officiel** : https://www.omegap-dz.com
+- **Couverture logistique** : Expédition et livraison directe sur chantier dans les 58 wilayas d'Algérie
+- **Cible B2B** : Grossistes en matériel électrique, quincailleries, promoteurs immobiliers (AADL, LPP, promotion privée), entreprises du BTP et artisans électriciens.
+
+## Produits Principaux et Spécifications Techniques
+
+### 1. Gaine ICTA 3422 avec Tire-fil en Acier Galvanisé
+- **Désignation** : Conduit Isolant, Cintrable, Transversalement élastique, Annelé.
+- **Résistance mécanique à la compression** : 750 Newtons à 23°C (Classe 3).
+- **Résistance aux chocs** : 6 Joules à -5°C (Classe 4).
+- **Plage de température de service** : -5°C à +90°C (Classe 22).
+- **Comportement au feu** : Auto-extinguible, non propagateur de flamme.
+- **Tire-fil** : Fil d'acier doux galvanisé de diamètre 0,8 mm (résistance à la rupture > 20 kg).
+- **Diamètres normalisés** :
+  - Ø16 mm : Circuits d'éclairage et navettes.
+  - Ø20 mm : Circuits prises de courant standard 16A (3G2.5 mm²).
+  - Ø25 mm : Lignes cuisson 32A (3G6 mm²), climatiseurs et réseaux informatiques RJ45.
+  - Ø32 mm : Colonnes montantes, alimentations générales d'appartements et tableaux divisionnaires.
+  - Ø40 mm & Ø50 mm : Réseaux industriels et colonnes de distribution.
+- **Conformité normative** : NF EN 61386-22 / CEI 61386-22 / NF C 15-100 / Norme Algérienne NA 5275 (IANOR).
+- **Application** : Encastrement sous béton armé (dalles pleines, planchers poutrelles-hourdis, radiers), cloisons sèches BA13 et doublages isolants.
+
+### 2. Conduit Annelé Fendu Longitudinalement
+- **Désignation** : Gaine fendue pour protection et maintenance de faisceaux de câbles.
+- **Application** : Câblage télécom, armoires électriques industrielles, réseaux informatiques, réhabilitation sans déconnexion des prises et connecteurs existants.
+- **Matière** : Polypropylène haute flexibilité.
+
+### 3. Boîtes d'Encastrement et de Dérivation
+- Boîtiers d'appareillage 1 à 4 postes pour pose sous plâtre et cloisons creuses.
+- Boîtes de dérivation étanches rondes et carrées avec opercules défonçables.
+
+## Règle du Tiers (1/3) de Remplissage (NF C 15-100)
+- La somme des sections extérieures des câbles (isolant compris) ne doit pas dépasser 33 % de la section intérieure de la gaine électrique.
+- Cela garantit une dissipation thermique optimale (évite l'échauffement par effet Joule) et un tirage aisé des conducteurs sans blocage.
+
+## FAQ Technique Fréquente
+- **Quel est le prix d'une gaine en Algérie ?** : Le prix dépend du diamètre et de la commande (vente au rouleau de 50m ou 100m, ou en gros volume par palette). Tarification directe usine disponible sur devis sous 24h.
+- **Peut-on couler du béton directement sur une gaine OMEGAP-DZ ?** : Oui, la certification 750N garantit l'intégrité de la gaine sous la pression du béton et la vibration mécanique.
+
+## Contact & Commercial
+- **Téléphone Service Commercial** : +213 550 00 00 00
+- **Email Commercial** : contact@omegap-dz.com
+- **Demande de devis en ligne** : https://www.omegap-dz.com/contact

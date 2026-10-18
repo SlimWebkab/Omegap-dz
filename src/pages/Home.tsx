@@ -15,8 +15,10 @@ import {
   Flame, 
   Sparkles,
   HelpCircle,
-  Calculator
+  Calculator,
+  BookOpen
 } from 'lucide-react';
+import { BLOG_ARTICLES } from '../data/blogData';
 
 export default function Home() {
   // Simulateur de calcul rapide de métrage pour les pros
@@ -67,6 +69,9 @@ export default function Home() {
             src={IMAGES.hero} 
             onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.hero; }}
             alt="Usine de fabrication de gaines électriques OMEGAP-DZ en Algérie" 
+            width={1600}
+            height={900}
+            fetchPriority="high"
             className="w-full h-full object-cover opacity-25 lg:opacity-35 filter brightness-105"
             loading="eager"
             decoding="async"
@@ -210,6 +215,8 @@ export default function Home() {
                   src={IMAGES.gaineIcta} 
                   onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.gaineIcta; }}
                   alt="Gaine ICTA 3422 OMEGAP-DZ fabriquée en Algérie" 
+                  width={600}
+                  height={360}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   decoding="async"
@@ -266,6 +273,8 @@ export default function Home() {
                   src={IMAGES.conduitFendu} 
                   onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.conduitFendu; }}
                   alt="Conduit fendu pour câbles et fibre optique OMEGAP-DZ" 
+                  width={600}
+                  height={360}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   decoding="async"
@@ -322,6 +331,8 @@ export default function Home() {
                   src={IMAGES.boitesAccessoires} 
                   onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.boitesAccessoires; }}
                   alt="Boîtes d'encastrement et raccords électriques OMEGAP-DZ" 
+                  width={600}
+                  height={360}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   decoding="async"
@@ -551,6 +562,8 @@ export default function Home() {
                   src={IMAGES.qualityLab} 
                   onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.qualityLab; }}
                   alt="Laboratoire de contrôle qualité et test de compression OMEGAP-DZ" 
+                  width={800}
+                  height={480}
                   className="w-full h-[480px] object-cover filter contrast-105"
                   loading="lazy"
                   decoding="async"
@@ -576,6 +589,84 @@ export default function Home() {
                 <p className="text-[11px] font-mono tracking-wider uppercase text-slate-200 mt-1">Écrasement Garanti</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5.5. BLOG TECHNIQUE & GUIDES D'INGÉNIERIE BTP (SEO Topic Cluster & Autorité) */}
+      <section className="py-24 bg-slate-100/70 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#00B4D8]/10 text-[#0077B6] text-xs font-mono font-bold uppercase tracking-wider mb-3 border border-[#00B4D8]/20">
+                <BookOpen className="w-3.5 h-3.5" />
+                <span>Centre d'Ingénierie & Blog Technique</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-heading font-extrabold text-[#0B132B]">
+                Guides Normatifs & Retours d'Expérience Chantier
+              </h3>
+              <p className="text-slate-600 text-sm max-w-2xl mt-2 font-light">
+                Analyses normatives (NF C 15-100, NA 5275) et recommandations pratiques pour éviter les sinistres d'écrasement sous béton.
+              </p>
+            </div>
+            <Link
+              to="/blog"
+              className="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs font-heading font-bold text-[#0077B6] hover:text-[#0B132B] uppercase tracking-wider transition-colors"
+            >
+              <span>Accéder à tous les articles</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {BLOG_ARTICLES.slice(0, 3).map((art) => (
+              <div
+                key={art.id}
+                className="bg-white border border-slate-200 overflow-hidden flex flex-col justify-between group hover:shadow-lg hover:border-[#00B4D8] transition-all"
+              >
+                <div>
+                  <div className="aspect-[16/10] bg-slate-900 overflow-hidden relative">
+                    <img
+                      src={art.featuredImage}
+                      alt={art.featuredImageAlt}
+                      width={640}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = art.featuredImageUrl;
+                      }}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 left-3 bg-[#0B132B]/85 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 border border-slate-700">
+                      {art.category}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="text-xs font-mono text-slate-500 mb-2 flex items-center gap-2">
+                      <Clock className="w-3.5 h-3.5 text-[#00B4D8]" />
+                      <span>{art.readTime}</span>
+                    </div>
+                    <h4 className="font-heading font-bold text-base text-[#0B132B] group-hover:text-[#00B4D8] transition-colors leading-snug mb-3">
+                      <Link to={`/blog/${art.slug}`}>{art.title}</Link>
+                    </h4>
+                    <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed font-light">
+                      {art.excerpt}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-6 pt-0">
+                  <Link
+                    to={art.status === 'published' ? `/blog/${art.slug}` : '/blog'}
+                    className="text-xs font-heading font-bold text-[#0077B6] flex items-center gap-1.5 uppercase tracking-wider group-hover:translate-x-1 transition-transform"
+                  >
+                    <span>{art.status === 'published' ? "Lire l'article complet" : "En savoir plus"}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

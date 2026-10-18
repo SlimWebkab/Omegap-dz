@@ -1,0 +1,33 @@
+# Robots.txt for OMEGAP-DZ (https://www.omegap-dz.com)
+# Autorise tous les moteurs de recherche et moteurs de réponses IA
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# AI Crawlers & LLM Search Agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://www.omegap-dz.com/sitemap.xml

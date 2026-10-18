@@ -133,6 +133,8 @@ export default function Products() {
                     src={product.image} 
                     onError={(e) => { e.currentTarget.src = product.fallbackImage; }}
                     alt={product.name} 
+                    width={800}
+                    height={500}
                     className="w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"

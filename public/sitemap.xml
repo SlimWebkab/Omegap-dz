@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Page d'Accueil -->
+  <url>
+    <loc>https://www.omegap-dz.com/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.omegap-dz.com/images/usine-fabrication-gaine-electrique-algerie.jpg</image:loc>
+      <image:title>Usine de fabrication gaines électriques OMEGAP-DZ Algérie</image:title>
+    </image:image>
+  </url>
+
+  <!-- Présentation & Usine -->
+  <url>
+    <loc>https://www.omegap-dz.com/presentation</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Catalogue Produits -->
+  <url>
+    <loc>https://www.omegap-dz.com/produits</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.omegap-dz.com/images/gaine-electrique-icta-3422-algerie.jpg</image:loc>
+      <image:title>Gaine électrique annelée ICTA 3422 OMEGAP-DZ</image:title>
+    </image:image>
+  </url>
+
+  <!-- Guide d'Installation -->
+  <url>
+    <loc>https://www.omegap-dz.com/installation</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Solutions Sectorielles -->
+  <url>
+    <loc>https://www.omegap-dz.com/solutions</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Centre Technique & Blog -->
+  <url>
+    <loc>https://www.omegap-dz.com/blog</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 1: Norme ICTA 3422 et Coulage Sous Dalle Béton -->
+  <url>
+    <loc>https://www.omegap-dz.com/blog/norme-icta-3422-coulage-dalle-beton-algerie</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.omegap-dz.com/images/guide-pose-gaine-icta-3422-dalle-beton.jpg</image:loc>
+      <image:title>Pose de gaines ICTA 3422 sous dalle béton en Algérie</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.omegap-dz.com/images/essai-compression-750n-gaine-electrique.jpg</image:loc>
+      <image:title>Essai de compression 750N gaine électrique laboratoire OMEGAP-DZ</image:title>
+    </image:image>
+  </url>
+
+  <!-- FAQ Technique -->
+  <url>
+    <loc>https://www.omegap-dz.com/faq</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact & Devis Usine -->
+  <url>
+    <loc>https://www.omegap-dz.com/contact</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

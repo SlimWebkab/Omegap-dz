@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'motion/react';
 import { Menu, X, ChevronRight, Phone, Mail, MapPin, Download, ShieldCheck, Factory } from 'lucide-react';
+import ScrollToTopButton from './ScrollToTopButton';
 
 export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,6 +35,7 @@ export default function Layout() {
     { name: 'Produits', path: '/produits' },
     { name: 'Installation', path: '/installation' },
     { name: 'Solutions', path: '/solutions' },
+    { name: 'Blog Technique', path: '/blog' },
     { name: 'FAQ Technique', path: '/faq' },
   ];
 
@@ -132,9 +134,9 @@ export default function Layout() {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-slate-900 hover:text-[#00B4D8] focus:outline-none"
+              className="lg:hidden p-2.5 min-w-[48px] min-h-[48px] flex items-center justify-center text-slate-900 hover:text-[#00B4D8] focus:outline-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Ouvrir le menu"
+              aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -313,6 +315,9 @@ export default function Layout() {
           </div>
         </div>
       </footer>
+
+      {/* Bouton Retour en Haut avec animation et indicateur de progression */}
+      <ScrollToTopButton />
     </div>
   );
 }
