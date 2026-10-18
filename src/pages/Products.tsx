@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Download, Check, ArrowRight, ShieldCheck, FileText, CheckCircle2, Factory } from 'lucide-react';
+import { IMAGES } from '../assets/images';
 
 export default function Products() {
   const [downloadModal, setDownloadModal] = useState<string | null>(null);
@@ -11,7 +12,8 @@ export default function Products() {
       id: "icta-3422",
       name: "Gaine ICTA 3422 avec Tire-Fil",
       subtitle: "Isolant Cintrable Transversalement Élastique Annelé",
-      image: "/src/assets/images/product_gaine_icta_1792342170612.jpg",
+      image: IMAGES.gaineIcta,
+      fallbackImage: IMAGES.publicUrls.gaineIcta,
       normBadge: "Norme NF EN 61386-22 / IANOR",
       description: "Le standard de référence en Algérie pour l'incorporation directe sous dalle béton vibré, chapes liquides, cloisons sèches et vides techniques. Dotée de la technologie Turbo-Gliss et d'un tire-fil en acier galvanisé lubrifié pour un aiguillage sans effort.",
       tableData: [
@@ -40,7 +42,8 @@ export default function Products() {
       id: "conduit-fendu",
       name: "Conduit Annelé Fendu Longitudinal",
       subtitle: "Gaine de protection & réhabilitation de faisceaux sans coupure",
-      image: "/src/assets/images/product_conduit_fendu_1792342171033.jpg",
+      image: IMAGES.conduitFendu,
+      fallbackImage: IMAGES.publicUrls.conduitFendu,
       normBadge: "Spécial Télécom, Armoires & Rénovation",
       description: "Conduit souple fendu sur toute sa longueur permettant le gainage et la mise en conformité immédiate de faisceaux électriques et câbles réseau déjà raccordés, sans aucune interruption de service ni démontage.",
       tableData: [
@@ -68,7 +71,8 @@ export default function Products() {
       id: "accessoires",
       name: "Boîtes d'Encastrement & Accessoires de Dérivation",
       subtitle: "Appareillage pour maçonnerie, béton et cloisons sèches",
-      image: "/src/assets/images/product_boites_accessoires_1792342171294.jpg",
+      image: IMAGES.boitesAccessoires,
+      fallbackImage: IMAGES.publicUrls.boitesAccessoires,
       normBadge: "Conformité NFC / Tenue Fil Incandescent 850°C",
       description: "Gamme complète de boîtiers d'encastrement monopostes et multipostes, boîtes de dérivation carrées et rondes avec entrées étanches prédécoupées pour conduits Ø16, Ø20 et Ø25 mm.",
       tableData: [
@@ -127,8 +131,11 @@ export default function Products() {
                 <div className="lg:col-span-5 bg-slate-100 relative min-h-[340px]">
                   <img 
                     src={product.image} 
+                    onError={(e) => { e.currentTarget.src = product.fallbackImage; }}
                     alt={product.name} 
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4 bg-[#0B132B] text-white px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider">

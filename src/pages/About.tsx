@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Target, Zap, Shield, Globe, Award, Factory, Truck, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { IMAGES } from '../assets/images';
 
 export default function About() {
   return (
@@ -66,9 +67,12 @@ export default function About() {
             <div className="relative">
               <div className="relative border-4 border-white shadow-[0_20px_40px_rgba(15,28,44,0.08)] overflow-hidden bg-slate-900">
                 <img 
-                  src="/src/assets/images/hero_factory_extrusion_1792342170423.jpg" 
+                  src={IMAGES.hero} 
+                  onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.hero; }}
                   alt="Usine d'extrusion de gaines électriques OMEGAP-DZ à Aït Toudert" 
                   className="w-full h-[520px] object-cover"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-transparent to-transparent opacity-80" />

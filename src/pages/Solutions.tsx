@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Home, Factory, Wifi, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { IMAGES } from '../assets/images';
 
 export default function Solutions() {
   const solutions = [
@@ -9,7 +10,8 @@ export default function Solutions() {
       icon: Home,
       title: "Bâtiment & Résidentiel (AADL, LPP, Promotion Immobilière)",
       subtitle: "Coulage sous dalle béton, chapes liquides & cloisons creuses",
-      image: "/src/assets/images/product_gaine_icta_1792342170612.jpg",
+      image: IMAGES.gaineIcta,
+      fallbackImage: IMAGES.publicUrls.gaineIcta,
       description: "Pour les programmes de logements collectifs et individuels en Algérie, la gaine OMEGAP-DZ ICTA 3422 garantit une résistance de 750N indispensable pour résister au poids du béton frais et aux vibrations des aiguilles. Finies les gaines écrasées qui imposent de casser la chape !",
       points: [
         "Résistance à l'écrasement 750N (Classe 3) certifiée en laboratoire.",
@@ -24,7 +26,8 @@ export default function Solutions() {
       icon: Factory,
       title: "Secteur Industriel, Usines & Agroalimentaire",
       subtitle: "Résistance aux huiles, vibrations mécaniques & contraintes sévères",
-      image: "/src/assets/images/hero_factory_extrusion_1792342170423.jpg",
+      image: IMAGES.hero,
+      fallbackImage: IMAGES.publicUrls.hero,
       description: "Les usines, ateliers et unités de transformation requièrent des conduits résistant aux chocs d'engins, aux projections d'hydrocarbures et aux ambiances poussiéreuses ou humides. OMEGAP-DZ fournit des canalisations renforcées pour armoires TGBT et machines-outils.",
       points: [
         "Tenue thermique étendue de -20°C à +105°C sans perte d'élasticité.",
@@ -39,7 +42,8 @@ export default function Solutions() {
       icon: Wifi,
       title: "Infrastructures Télécoms & Réseaux FTTH",
       subtitle: "Passage sous fourreaux, tirage de fibre optique & data centers",
-      image: "/src/assets/images/product_conduit_fendu_1792342171033.jpg",
+      image: IMAGES.conduitFendu,
+      fallbackImage: IMAGES.publicUrls.conduitFendu,
       description: "L'accélération du déploiement de la fibre optique par Algérie Télécom et les opérateurs réseau exige des conduits à très faible coefficient de frottement interne pour acheminer les câbles optiques fragiles sans risque de rupture.",
       points: [
         "Paroi intérieure optimisée pour soufflage ou aiguillage fluide de jarretières fibre.",
@@ -86,8 +90,11 @@ export default function Solutions() {
                 <div className={`lg:col-span-5 bg-slate-900 relative min-h-[360px] ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <img 
                     src={solution.image} 
+                    onError={(e) => { e.currentTarget.src = solution.fallbackImage; }}
                     alt={solution.title} 
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/80 via-transparent to-transparent"></div>

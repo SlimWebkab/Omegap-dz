@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { IMAGES } from '../assets/images';
 import { 
   ChevronRight, 
   ShieldCheck, 
@@ -63,9 +64,12 @@ export default function Home() {
         {/* Visuel d'arrière plan industriel avec superposition Blueprint */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/hero_factory_extrusion_1792342170423.jpg" 
+            src={IMAGES.hero} 
+            onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.hero; }}
             alt="Usine de fabrication de gaines électriques OMEGAP-DZ en Algérie" 
             className="w-full h-full object-cover opacity-25 lg:opacity-35 filter brightness-105"
+            loading="eager"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#F8FAFC] via-[#F8FAFC]/90 to-transparent"></div>
@@ -203,9 +207,12 @@ export default function Home() {
             <div className="bg-white border border-slate-200/80 shadow-[0_20px_40px_rgba(15,28,44,0.06)] flex flex-col group hover:border-[#00B4D8]/50 transition-all duration-300">
               <div className="relative h-60 overflow-hidden bg-slate-100">
                 <img 
-                  src="/src/assets/images/product_gaine_icta_1792342170612.jpg" 
+                  src={IMAGES.gaineIcta} 
+                  onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.gaineIcta; }}
                   alt="Gaine ICTA 3422 OMEGAP-DZ fabriquée en Algérie" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 left-3 bg-[#0B132B] text-white px-3 py-1 text-[11px] font-mono font-bold tracking-wider uppercase">
@@ -256,9 +263,12 @@ export default function Home() {
             <div className="bg-white border border-slate-200/80 shadow-[0_20px_40px_rgba(15,28,44,0.06)] flex flex-col group hover:border-[#00B4D8]/50 transition-all duration-300">
               <div className="relative h-60 overflow-hidden bg-slate-100">
                 <img 
-                  src="/src/assets/images/product_conduit_fendu_1792342171033.jpg" 
+                  src={IMAGES.conduitFendu} 
+                  onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.conduitFendu; }}
                   alt="Conduit fendu pour câbles et fibre optique OMEGAP-DZ" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 left-3 bg-[#0077B6] text-white px-3 py-1 text-[11px] font-mono font-bold tracking-wider uppercase">
@@ -309,9 +319,12 @@ export default function Home() {
             <div className="bg-white border border-slate-200/80 shadow-[0_20px_40px_rgba(15,28,44,0.06)] flex flex-col group hover:border-[#00B4D8]/50 transition-all duration-300">
               <div className="relative h-60 overflow-hidden bg-slate-100">
                 <img 
-                  src="/src/assets/images/product_boites_accessoires_1792342171294.jpg" 
+                  src={IMAGES.boitesAccessoires} 
+                  onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.boitesAccessoires; }}
                   alt="Boîtes d'encastrement et raccords électriques OMEGAP-DZ" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 left-3 bg-slate-800 text-white px-3 py-1 text-[11px] font-mono font-bold tracking-wider uppercase">
@@ -535,9 +548,12 @@ export default function Home() {
               {/* Photo du banc de test de résistance 750N / Labo de contrôle qualité */}
               <div className="relative border-4 border-white shadow-[0_20px_50px_rgba(15,28,44,0.12)] overflow-hidden bg-slate-900">
                 <img 
-                  src="/src/assets/images/facility_quality_lab_1792342172202.jpg" 
+                  src={IMAGES.qualityLab} 
+                  onError={(e) => { e.currentTarget.src = IMAGES.publicUrls.qualityLab; }}
                   alt="Laboratoire de contrôle qualité et test de compression OMEGAP-DZ" 
                   className="w-full h-[480px] object-cover filter contrast-105"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/80 via-transparent to-transparent" />
